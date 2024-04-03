@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cmpe277.chatgptapp">
 
-    <!-- Include the INTERNET permission for network access -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -12,15 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatGPTApp">
 
-        <!-- MainActivity is the entry point of the app, hence android:exported is set to true -->
         <activity android:name=".MainActivity"
-            android:exported="true"> <!-- This line is important for apps targeting API 31+ -->
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!-- Other activities or components if any -->
     </application>
 
 </manifest>

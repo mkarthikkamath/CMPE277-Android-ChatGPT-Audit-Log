@@ -1,61 +1,93 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightBlue"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/lightBlue">
 
-    <!-- Add ImageView to display the logo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/sjsu_logo"
         android:contentDescription="@string/logo"
-        android:layout_centerHorizontal="true"/>
+        android:scaleType="centerInside"
+        android:layout_marginBottom="24dp"/>
 
     <EditText
         android:id="@+id/editTextPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/prompt_hint"
-        android:layout_below="@id/imageViewLogo"
-        android:background="@drawable/edit_text_style"
-        android:padding="12dp"
-        android:layout_marginTop="16dp"/>
+        android:padding="12dp"/>
 
-
-    <Button
-        android:id="@+id/buttonSend"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPrompt"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_style"
-        android:text="@string/send_button"
-        android:textColor="@color/yellow"
-    android:padding="12dp"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/buttonCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPrompt"
-        android:layout_toEndOf="@id/buttonSend"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_style"
-        android:text="@string/cancel_button"
-        android:textColor="@color/yellow"
-    android:padding="12dp"/>
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/send_button"
+            android:textColor="@color/yellow"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_button"
+            android:textColor="@color/yellow"
+            android:padding="12dp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textViewResponse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSend"
-        android:layout_marginTop="16dp"
-        android:background="@color/responseBackground"
-        android:textColor="@color/secondaryTextColor"
+        android:text="@string/response_hint"
+        android:background="@color/white"
+        android:textColor="@color/black"
         android:padding="16dp"
-        android:hint="@string/response_hint"/>
-</RelativeLayout>
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_button"
+            android:textColor="@color/yellow"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/buttonAudit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/audit_button"
+            android:textColor="@color/yellow"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+</LinearLayout>

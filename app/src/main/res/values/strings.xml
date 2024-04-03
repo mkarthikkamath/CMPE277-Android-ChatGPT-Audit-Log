@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">ChatGPTApp</string>
+    <string name="app_title">Android ChatGPT App</string>
     <string name="send_button">Send</string>
     <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="audit_button">Audit</string>
     <string name="prompt_hint">Enter your prompt here...</string>
     <string name="response_hint">Your response will appear here...</string>
     <string name="logo">SJSU Logo</string>
 </resources>
-

@@ -13,7 +13,6 @@ public class NetworkUtils {
     private static final String API_KEY = "";
 
     public static String callOpenAIChatGPT(String prompt) {
-        // Build the JSON payload with the model parameter and the messages array
         String jsonPayload = String.format(
                 "{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"%s\"}]}",
                 prompt);

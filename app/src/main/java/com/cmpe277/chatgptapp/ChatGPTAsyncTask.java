@@ -30,7 +30,6 @@ public class ChatGPTAsyncTask extends AsyncTask<String, Void, String> {
             String content = jsonResponse.getJSONArray("choices").getJSONObject(0)
                     .getJSONObject("message").getString("content");
 
-            // Now you can use just the content string
             onResponse.accept(content);
         } catch (JSONException e) {
             e.printStackTrace();
