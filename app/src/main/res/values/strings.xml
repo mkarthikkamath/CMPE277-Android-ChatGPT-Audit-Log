@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChatGPTApp</string>
+    <string name="send_button">Send</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="prompt_hint">Enter your prompt here...</string>
+    <string name="response_hint">Your response will appear here...</string>
+    <string name="logo">SJSU Logo</string>
+</resources>
+
